@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://sbrown:vikings1@spring-v37ew.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret",
+  "githubClientId": "",
+  "githubSecret": ""
+}
