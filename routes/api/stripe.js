@@ -20,15 +20,6 @@ router.post('/', async function(req, res) {
     })
   })
 
-router.get('/', function(req, res) {
-    console.log('got');
-    res.send('got');
-});
-
-router.get('/f', function(req, res) {
-  console.log('got');
-  res.send('got');
-});
 
   
 
