@@ -87,7 +87,7 @@ function CheckoutForm({history, createOrder, createContact }) {
 
     let token;
 
-    axios.post('http://localhost:5000/api/stripe', {
+    axios.post('/api/stripe', {
       firstName: 'Fred',
       lastName: 'Flintstone',
       price: total,
