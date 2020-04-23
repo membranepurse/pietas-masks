@@ -9,6 +9,11 @@ const Order = require('../../models/Order');
  * @access  Public
  */
 
+router.get('/f', function(req, res) {
+  console.log('got');
+  res.send('got');
+});
+
 router.get('/', async (req, res) => {
     try {
       const orders = await Order.find();
