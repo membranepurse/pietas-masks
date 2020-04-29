@@ -11,7 +11,8 @@ export const ProductsContext = createContext({
     cartTax: 0,
     cartTotal: 0,
     modal: false,
-    visible: true   
+    visible: false,
+    currProduct: 0
 })
 
 const ProductsProvider = ({children}) => {
@@ -21,17 +22,22 @@ const ProductsProvider = ({children}) => {
         JSON.parse ( localStorage.getItem('cart') ) || []
     );
     const products = [...data]
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     const [modal, setModal] = useState(false);
+    const [currProduct, setCurrProduct] = useState(0);
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
+    const showAlert = () => setVisible(true);
+
     const onDismiss = () => setVisible(false);
 
-    const openModal = () => {
+    const openModal = (id) => {
         console.log('hey')
+
+        setCurrProduct(id - 1)
         setModal(true)
         return
     }
@@ -164,6 +170,8 @@ const ProductsProvider = ({children}) => {
             cart,
             modal,
             visible,
+            currProduct,
+            showAlert,
             onDismiss,
             getProd,
             addCart,

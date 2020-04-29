@@ -5,11 +5,9 @@ import { Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 function Modal() {
     const data = PRODUCT_DATA;
-    const { modal, openModal, closeModal } = useContext(ProductsContext)
-    console.log(data)
-    const test = () => {
-        console.log("wtf")
-    }
+    const { currProduct, modal, openModal, closeModal } = useContext(ProductsContext)
+    console.log(currProduct);
+    
 
     return (
     <div>
@@ -24,8 +22,8 @@ function Modal() {
                       style={{background: 'white'}}
                     >
                       <h5>item added to cart</h5>
-                      <img src={data[0].img} className="img-fluid" alt="" />
-                      <h5>{data[0].title}</h5>
+                      <img src={data[currProduct].img} className="img-fluid" alt="" />
+                      <h5>{data[currProduct].title}</h5>
                       <h5 className="text-muted">price : ${data[0].price}</h5>
                       <div className="column padding">
                           <Button onClick={closeModal}>Continue Shopping</Button>

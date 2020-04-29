@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb://sbrown:vikings1@ds015929.mlab.com:15929/heroku_0xgcg2zt",
+  "mongoURI": "mongodb+srv://sbrown:vikings1@spring-v37ew.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "secret",
   "githubClientId": "",
   "githubSecret": ""

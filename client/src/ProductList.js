@@ -22,7 +22,7 @@ function ProductList() {
                   <h3 className="white">${product.price}</h3>
                   <Button className="btn-hover" color="primary" onClick={() => {
                      addCart(product.id);
-                     openModal()
+                     openModal(product.id)
                   }}>Add</Button>
                </div>
             </div>

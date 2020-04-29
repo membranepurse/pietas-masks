@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 function CheckoutForm({history, createOrder, createContact }) {
-  const { cart, calcTotal, clearCart } = useContext(ProductsContext)
+  const { showAlert, cart, calcTotal, clearCart } = useContext(ProductsContext)
   const stripe = useStripe();
   const elements = useElements();
   const total = calcTotal();
@@ -121,6 +121,7 @@ function CheckoutForm({history, createOrder, createContact }) {
           // post-payment actions.
         }
         clearCart();
+        showAlert();
         history.push('/');
       }
 
