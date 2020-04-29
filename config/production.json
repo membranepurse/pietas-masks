@@ -1,6 +1,7 @@
 {
-  "mongoURI": "mongodb://sbrown:vikings1@ds015929.mlab.com:15929/heroku_0xgcg2zt",
+  "mongoURI": "mongodb://sbrown:vikings1@ds155841.mlab.com:55841/heroku_w5dhh7zf",
   "jwtSecret": "secret",
   "githubClientId": "",
   "githubSecret": ""
 }
+
